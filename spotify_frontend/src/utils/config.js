@@ -1,1 +1,1 @@
-export const backendUrl = "https://stream-theta-vert.vercel.app";
+export const backendUrl = "https://streaming-peach.vercel.app";
