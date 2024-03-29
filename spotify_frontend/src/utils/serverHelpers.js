@@ -3,7 +3,6 @@ import {backendUrl} from "./config";
 export const makeUnauthenticatedPOSTRequest = async (route, body) => {
     const response = await fetch(backendUrl + route, {
         method: "POST",
-        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
         },
@@ -17,7 +16,6 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
     const token = getToken();
     const response = await fetch(backendUrl + route, {
         method: "POST",
-        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
