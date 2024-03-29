@@ -1,1 +1,1 @@
-export const backendUrl = "https://streaming-peach.vercel.app";
+export const backendUrl = "https://localhost:8080";
