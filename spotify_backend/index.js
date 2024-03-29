@@ -13,7 +13,7 @@ const app = express();
 const port = 8080;
 
 app.use(cors({
-    origin: ["https://deploy-musicstreamingapp.vercel.app"],
+    origin: ["https://stream-orpin.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));

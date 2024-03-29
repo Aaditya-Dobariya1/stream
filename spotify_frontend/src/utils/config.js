@@ -1,1 +1,1 @@
-export const backendUrl = "https://music-streaming-app-eight.vercel.app";
+export const backendUrl = "https://stream-orpin.vercel.app";
