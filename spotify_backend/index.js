@@ -13,7 +13,7 @@ const app = express();
 const port = 8080;
 
 app.use(cors({
-    origin: ["https://music-streaming-app"],
+    origin: ["https://music-streaming-app", "http://localhost:8080"],
 }));
 app.use(express.json());
 
