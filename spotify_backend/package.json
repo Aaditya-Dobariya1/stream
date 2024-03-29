@@ -4,7 +4,7 @@
   "description": "This will contain the backend of music streaming app",
   "main": "index.js",
   "scripts": {
-    "start": "node /spotify_backend/index.js"
+    "start": "node /spotify_backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js",
     "build": "npm i"
