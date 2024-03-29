@@ -5,6 +5,9 @@ export const makeUnauthenticatedPOSTRequest = async (route, body) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
         body: JSON.stringify(body),
     });
@@ -19,6 +22,9 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
         body: JSON.stringify(body),
     });
@@ -33,6 +39,9 @@ export const makeAuthenticatedGETRequest = async (route) => {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
     });
     const formattedResponse = await response.json();
@@ -43,13 +52,3 @@ const getToken = () => {
     const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/,"$1");
     return accessToken;
 };
-
-const headers = {'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
-const response = {
-    statusCode: 200,
-    headers:headers,
-    body: JSON.stringify(X),
-};
-return response;
