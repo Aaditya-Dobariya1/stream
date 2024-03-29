@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "dev": "node index.js",
     "build": "npm i"
   },
-  "author": "Aaditya, Gyanshu, Sanchit, Vandan",
+  "author": "Aaditya, Gyanshu, Sanchit, Vandan, Vanraj, Shitesh",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
