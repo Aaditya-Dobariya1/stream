@@ -4,7 +4,9 @@
   "description": "This will contain the backend of music streaming app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon index.js",
+    "build" : "npm i"
   },
   "author": "Aaditya, Gyanshu, Sanchit, Vandan",
   "license": "ISC",
