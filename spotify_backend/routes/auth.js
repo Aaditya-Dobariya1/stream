@@ -43,23 +43,4 @@ router.post("/login", async (req, res) => {
     return res.status(200).json(userToReturn);
 });
 
-router.post("/logout", async (req, res) => {
-        const token = req.cookies.token;
-
-    // If token exists in cookies, you can remove it
-    if (token) {
-        // Clear the token from cookies
-        res.clearCookie(token);
-        
-        // Optionally, you can also clear the token from session if you're using both session and cookies
-        // req.session.token = null;
-
-        // Redirect to home page
-        return res.redirect('/home');
-    }
-
-    // If token doesn't exist in cookies
-    return res.status(400).json({ error: "No token found in cookies" });
-});
-
 module.exports = router;

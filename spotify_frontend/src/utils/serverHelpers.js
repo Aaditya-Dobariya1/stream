@@ -5,9 +5,6 @@ export const makeUnauthenticatedPOSTRequest = async (route, body) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
         body: JSON.stringify(body),
     });
@@ -22,9 +19,6 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
         body: JSON.stringify(body),
     });
@@ -39,9 +33,6 @@ export const makeAuthenticatedGETRequest = async (route) => {
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
         },
     });
     const formattedResponse = await response.json();
