@@ -13,7 +13,7 @@ const app = express();
 const port = 8080;
 
 app.use(cors({
-    origin: ["https://stream-theta-vert.vercel.app/"],
+    origin: ["https://stream-theta-vert.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
