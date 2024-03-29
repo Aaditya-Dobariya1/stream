@@ -1,7 +1,7 @@
 import {backendUrl} from "./config";
 
 export const makeUnauthenticatedPOSTRequest = async (route, body) => {
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch("https://stream-orpin.vercel.app" + route, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export const makeUnauthenticatedPOSTRequest = async (route, body) => {
 
 export const makeAuthenticatedPOSTRequest = async (route, body) => {
     const token = getToken();
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch("https://stream-orpin.vercel.app" + route, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
 
 export const makeAuthenticatedGETRequest = async (route) => {
     const token = getToken();
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch("https://stream-orpin.vercel.app" + route, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
