@@ -39,6 +39,11 @@ export const makeAuthenticatedGETRequest = async (route) => {
     return formattedResponse;
 };
 
+const getToken = () => {
+    const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/,"$1");
+    return accessToken;
+};
+
 const headers = {'Content-Type':'application/json',
                     'Access-Control-Allow-Origin':'*',
                     'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
@@ -48,8 +53,3 @@ const response = {
     body: JSON.stringify(X),
 };
 return response;
-
-const getToken = () => {
-    const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/,"$1");
-    return accessToken;
-};
